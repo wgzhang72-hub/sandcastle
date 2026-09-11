@@ -26,7 +26,10 @@ RUN groupmod -o -g $AGENT_GID node && usermod -o -u $AGENT_UID -g $AGENT_GID -d 
 USER ${AGENT_UID}:${AGENT_GID}
 
 # Install Claude Code CLI
-RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# 用 npm 安装 Claude Code
+USER root
+RUN npm install -g @anthropic-ai/claude-code
 
 # Add Claude to PATH
 ENV PATH="/home/agent/.local/bin:$PATH"

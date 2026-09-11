@@ -1,0 +1,7 @@
+#start claude in docker
+docker run --entrypoint "" -it -e ANTHROPIC_BASE_URL="https:/
+/api.cdn-krill-ai.com/coding" -e ANTHROPIC_AUTH_TOKEN="nb_ypBX9z8EBwpti2sSXVtNOHN22yYIMJw9BrBqGqQIUpg" -e C
+LAUDE_CODE_ATTRIBUTION_HEADER="0" -e CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS="1" -e ANTHROPIC_MODEL="deepsee
+k-v4-flash[1m]" -e ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-flash[1m]" -e ANTHROPIC_DEFAULT_HAIKU_MODEL="d
+eepseek-v4-flash[1m]" -e CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-flash[1m]" -e CLAUDE_CODE_DISABLE_UNKNOWN_
+MODEL_WINDOW_ENFORCEMENT=1 \sandcastle:dev claude
